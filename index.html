@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hall Mark Royal School</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#003366" />
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="nav-left">
+      <!-- Inline SVG Logo (so you don't need an image file) -->
+      <a class="brand" href="#home" aria-label="Hall Mark Royal School">
+        <svg class="logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="false">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#ffcc00"/>
+              <stop offset="1" stop-color="#ffd966"/>
+            </linearGradient>
+          </defs>
+          <circle cx="60" cy="60" r="54" fill="#003366"/>
+          <path d="M34 78 L60 38 L86 78 Z" fill="url(#g)" stroke="#fff" stroke-width="2"/>
+          <text x="60" y="96" font-size="10" text-anchor="middle" fill="#fff" font-family="Arial">HMR</text>
+        </svg>
+        <div class="brand-text">
+          <strong>Hall Mark</strong><span>Royal School</span>
+        </div>
+      </a>
+    </div>
+
+    <nav class="nav-right" role="navigation" aria-label="Main menu">
+      <a href="#about">About</a>
+      <a href="#academics">Academics</a>
+      <a href="#admission">Admission</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#anthem">Anthem</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <main id="home">
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Hall Mark Royal School</h1>
+        <p class="subtitle">Raising Excellent Scholars With Strong Morals and Discipline</p>
+        <div class="hero-actions">
+          <a href="#admission" class="btn-primary">Apply for Admission</a>
+          <a href="#about" class="btn-ghost">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-image" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section container">
+      <h2>About Our School</h2>
+      <p>
+        Hall Mark Royal School is a center of academic excellence located in Obiaruku, Delta State.
+        We provide a safe, stimulating environment where children grow academically, morally and socially.
+      </p>
+
+      <div class="grid-2 cards">
+        <div class="card">
+          <h3>Our Mission</h3>
+          <p>To develop responsible, disciplined and academically strong students who contribute positively to society.</p>
+        </div>
+
+        <div class="card">
+          <h3>Our Vision</h3>
+          <p>To be the leading school in the region known for excellence, character formation and holistic education.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ACADEMICS ===== -->
+    <section id="academics" class="section alt">
+      <div class="container">
+        <h2>Academic Departments</h2>
+        <div class="grid-4 cards">
+          <div class="card">Creche & Nursery</div>
+          <div class="card">Primary School</div>
+          <div class="card">Junior Secondary</div>
+          <div class="card">Senior Secondary</div>
+        </div>
+        <p class="small">Qualified teachers • Structured curriculum • Continuous assessment</p>
+      </div>
+    </section>
+
+    <!-- ===== ADMISSION ===== -->
+    <section id="admission" class="section container">
+      <h2>Admission</h2>
+      <p>Admission is open for the 2025 academic session. Complete the form below to begin an application.</p>
+
+      <form id="admissionForm" class="form card">
+        <div class="form-row">
+          <label for="pname">Parent / Guardian Name</label>
+          <input id="pname" name="parent_name" required />
+        </div>
+        <div class="form-row">
+          <label for="sname">Child's Full Name</label>
+          <input id="sname" name="student_name" required />
+        </div>
+        <div class="form-row">
+          <label for="dob">Date of Birth</label>
+          <input id="dob" name="dob" type="date" required />
+        </div>
+        <div class="form-row">
+          <label for="class">Applying For (Class)</label>
+          <select id="class" name="applying_class" required>
+            <option>Creche</option>
+            <option>Nursery</option>
+            <option>Primary 1</option>
+            <option>Primary 2</option>
+            <option>JSS 1</option>
+            <option>SS 1</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone Number</label>
+          <input id="phone" name="phone" type="tel" placeholder="080xxxxxxxx" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email (optional)</label>
+          <input id="email" name="email" type="email" />
+        </div>
+        <div class="form-row">
+          <label for="notes">Notes / Medical Info (optional)</label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Submit Application</button>
+          <button type="button" id="downloadJson" class="btn-ghost">Save & Download</button>
+        </div>
+
+        <p class="small muted">When you submit, a message will appear confirming the form is saved locally and a pre-filled email is prepared for the school.</p>
+      </form>
+    </section>
+
+    <!-- ===== GALLERY / SLIDESHOW ===== -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="slideshow" aria-live="polite">
+          <div class="slides">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1280&q=60&auto=format&fit=crop" alt="Students in classroom" />
+            <img src="https://images.unsplash.com/photo-1562564055-71e051d28b7d?w=1280&q=60&auto=format&fit=crop" alt="School library" />
+            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=1280&q=60&auto=format&fit=crop" alt="School playground" />
+          </div>
+          <button class="slide-prev" aria-label="Previous slide">‹</button>
+          <button class="slide-next" aria-label="Next slide">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ANTHEM ===== -->
+    <section id="anthem" class="section container alt">
+      <h2>School Anthem</h2>
+      <div class="anthem card">
+        <p><strong>Hall Mark Royal School Anthem</strong></p>
+        <p>
+          We pledge to learn and serve with heart, <br>
+          To seek the truth, to seek the right, <br>
+          With courage, faith and noble part, <br>
+          We’ll shine like stars in morning light. <br>
+          Hall Mark Royal, our guiding name, <br>
+          We rise in knowledge, strength and fame.
+        </p>
+
+        <audio controls preload="none">
+          <source src="" />
+          <!-- blank source — keep for when you add audio file -->
+        </audio>
+      </div>
+
+      <div class="grid-2 cards">
+        <div class="card">
+          <h3>Core Values</h3>
+          <ul>
+            <li>Discipline</li>
+            <li>Integrity</li>
+            <li>Excellence</li>
+            <li>Respect</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>What we offer</h3>
+          <ul>
+            <li>Strong academic curriculum</li>
+            <li>Extra-curricular activities</li>
+            <li>Character education</li>
+            <li>Parental involvement</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section container">
+      <h2>Contact Us</h2>
+      <p>📍 Obiaruku, Delta State, Nigeria</p>
+      <p>📧 hallmarkroyalschool@gmail.com</p>
+      <p>📞 080 3772 2291</p>
+
+      <div class="contact-actions">
+        <a class="btn-primary" href="tel:08037722291">Call School</a>
+        <a class="btn-ghost" id="openWhatsApp" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+  <a id="whatsappFloat" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"></a>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Hall Mark Royal School | All Rights Reserved</p>
+      <p class="small muted">Designed for Hall Mark Royal School • Obiaruku</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+            </html>
